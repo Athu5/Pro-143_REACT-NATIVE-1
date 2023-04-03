@@ -78,9 +78,6 @@ export default class HomeScreen extends React.Component{
                 />
                     </View>
                     <View style = {styles.subContainer} >
-                        <View style = {styles.subTopContainer}>
-                        <Image style={styles.posterImage} source={{ uri: url }} />
-                        </View>
                         <View style = {styles.subBottomContainer}>
                         <Text style={styles.title}>{title}</Text>
                         </View>
