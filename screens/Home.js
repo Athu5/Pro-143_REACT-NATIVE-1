@@ -1,7 +1,7 @@
 import React from "react";
 import {RFValue}  from  "react-native-responsive-fontsize";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import { Header, AirbnbRating, Icon } from "react-native-elements";
+import { Header, Icon } from "react-native-elements";
 import axios from "axios";
 
 export default class HomeScreen extends React.Component{
@@ -84,19 +84,6 @@ export default class HomeScreen extends React.Component{
                         <View style = {styles.subBottomContainer}>
                         <Text style={styles.title}>{title}</Text>
                         </View>
-                        <View style={styles.middleBottomContainer}>
-                        <View style={{ flex: 0.3 }}>
-                        <AirbnbRating
-                        count={10}
-                        reviews={["", "", "", "", ""]}
-                        defaultRating={rating}
-                        isDisabled={true}
-                        size={RFValue(25)}
-                        starContainerStyle={{ marginTop: -30 }}
-                      />
-                        </View>
-                    </View>
-    
                     <View style={styles.lowerBottomContainer}>
                     <View style={styles.iconButtonContainer}>
                       <TouchableOpacity onPress={this.likedArticle}>
@@ -157,17 +144,10 @@ export default class HomeScreen extends React.Component{
         subBottomContainer: {
           flex: 0.6
         },
-        upperBottomContainer: {
-          flex: 0.2,
-          alignItems: "center"
-        },
         title: {
           fontSize: RFValue(20),
           fontWeight: "bold",
           textAlign: "center"
-        },
-        middleBottomContainer: {
-          flex: 0.35
         },
         lowerBottomContainer: {
           flex: 0.45
